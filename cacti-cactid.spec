@@ -1,13 +1,13 @@
 Summary:	A backend data gatherer for cacti
 Name:		cacti-cactid
-Version:	0.8.6f
-Release:	%mkrel 4
+Version:	0.8.6i
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
 URL:		http://www.cacti.net/
-Source0:	http://www.cacti.net/downloads/cactid/%{name}-%{version}-1.tar.bz2
+Source0:	http://www.cacti.net/downloads/cactid/%{name}-%{version}.tar.gz
 Requires:	cacti
-BuildRequires:	MySQL-devel
+BuildRequires:	mysql-devel
 BuildRequires:	net-snmp-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -19,9 +19,10 @@ only just begun. It has been included in the main release for
 
 %prep
 
-%setup -q -n %{name}-%{version}-1
+%setup -q -n %{name}-%{version}
 
 %build
+%serverbuild
 # x86_64 fix
 export LDFLAGS="-L%{_libdir}"
 %configure2_5x
@@ -41,7 +42,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc CHANGELOG INSTALL README
+%doc ChangeLog INSTALL README LICENSE*
 %config(noreplace) %{_sysconfdir}/cactid.conf
 %attr(0755,root,root) %{_sbindir}/cactid
 
