@@ -9,7 +9,6 @@ Source0:	http://www.cacti.net/downloads/cactid/%{name}-%{version}.tar.gz
 Requires:	cacti
 BuildRequires:	mysql-devel
 BuildRequires:	net-snmp-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This code represents the future replacement for cmd.php. As you
