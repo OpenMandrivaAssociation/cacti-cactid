@@ -1,7 +1,7 @@
 Summary:	A backend data gatherer for cacti
 Name:		cacti-cactid
 Version:	0.8.6k
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPL
 Group:		System/Servers
 URL:		http://www.cacti.net/
@@ -9,7 +9,7 @@ Source0:	http://www.cacti.net/downloads/cactid/%{name}-%{version}.tar.gz
 Requires:	cacti
 BuildRequires:	mysql-devel
 BuildRequires:	net-snmp-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This code represents the future replacement for cmd.php. As you
