@@ -8,6 +8,11 @@ URL:		https://www.cacti.net/
 Source0:	http://www.cacti.net/downloads/cactid/%{name}-%{version}.tar.gz
 Patch0:		cacti-cactid-0.8.6k-format_not_a_string_literal_and_no_format_arguments.diff
 Requires:	cacti
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	mysql-devel
 BuildRequires:	net-snmp-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
